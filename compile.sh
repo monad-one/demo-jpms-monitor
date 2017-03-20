@@ -36,6 +36,14 @@ jar9 --create \
 	--file mods/monitor.observer.beta.jar \
 	-C classes/monitor.observer.beta .
 
+echo " > creating stats.fancy"
+javac9 \
+	--module-path mods \
+	-d classes/stats.fancy \
+	$(find stats.fancy -name '*.java')
+jar9 --create \
+	--file mods/stats.fancy.jar \
+	-C classes/stats.fancy .
 
 echo " > creating monitor.statistics"
 javac9 \

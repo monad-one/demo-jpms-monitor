@@ -29,6 +29,9 @@ jar9 --create \
 	--file mods/monitor.observer.beta.jar \
 	-C classes/monitor.observer.beta .
 jar9 --create \
+	--file mods/stats.fancy.jar \
+	-C classes/stats.fancy .
+jar9 --create \
 	--file mods/monitor.statistics.jar \
 	-C classes/monitor.statistics .
 jar9 --create \
