@@ -66,6 +66,16 @@ jar9 --create \
 	--file mods/monitor.rest.jar \
 	-C classes/monitor.rest .
 
+echo " > creating monitor.peek"
+javac9 \
+	--module-path mods \
+	-d classes/monitor.peek \
+	$(find monitor.peek -name '*.java')
+jar9 --create \
+	--file mods/monitor.peek.jar \
+	--main-class monitor.Peek \
+	-C classes/monitor.peek .
+
 echo " > creating monitor"
 javac9 \
 	--module-path mods \

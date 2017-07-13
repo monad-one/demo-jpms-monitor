@@ -38,6 +38,10 @@ jar9 --create \
 	--file mods/monitor.rest.jar \
 	-C classes/monitor.rest .
 jar9 --create \
+	--file mods/monitor.peek.jar \
+	--main-class monitor.Peek \
+	-C classes/monitor.peek .
+jar9 --create \
 	--file mods/monitor.jar \
 	--main-class monitor.Main \
 	-C classes/monitor .
