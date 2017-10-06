@@ -33,7 +33,12 @@ javac9 \
 	-d classes/monitor.observer.beta \
 	$(find monitor.observer.beta -name '*.java')
 jar9 --create \
-	--file mods/monitor.observer.beta.jar \
+	--file mods/monitor.observer.beta-1.0.jar \
+	--module-version 1.0 \
+	-C classes/monitor.observer.beta .
+jar9 --create \
+	--file mods/monitor.observer.beta-2.0.jar \
+	--module-version 2.0 \
 	-C classes/monitor.observer.beta .
 
 
