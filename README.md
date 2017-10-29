@@ -41,3 +41,8 @@ List<ServiceObserverFactory> observerFactories = ServiceLoader
 ```
 
 Building and executing doesn't change.
+
+## Compatibility
+
+To demonstrate that services in plain JARs still work the way they used to, I created an additional service _monitor.observer.zero_.
+It uses `META-INF/services` to declare `ZeroObserverFactory`  and `run.sh` as well as Maven exec load it as an automatic module.
