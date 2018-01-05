@@ -37,12 +37,11 @@ jar9 --create \
 	-C classes/monitor.observer.beta .
 
 
-echo " > creating monitor.observer.zero (plain JAR)"
+echo " > creating monitor.observer.zero"
 javac9 \
-	--class-path 'mods/*' \
+	--module-path mods \
 	-d classes/monitor.observer.zero \
 	$(find monitor.observer.zero -name '*.java')
-cp -r monitor.observer.zero/src/main/resources/META-INF classes/monitor.observer.zero
 jar9 --create \
 	--file mods/monitor.observer.zero.jar \
 	-C classes/monitor.observer.zero .
