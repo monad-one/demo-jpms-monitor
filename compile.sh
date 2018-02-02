@@ -8,6 +8,8 @@ rm -rf classes
 mkdir classes
 rm -rf mods
 mkdir mods
+rm -rf mods-gamma
+mkdir mods-gamma
 
 echo " > creating monitor.observer"
 javac9 \
@@ -35,6 +37,16 @@ javac9 \
 jar9 --create \
 	--file mods/monitor.observer.beta.jar \
 	-C classes/monitor.observer.beta .
+
+
+echo " > creating monitor.observer.gamma"
+javac9 \
+	--module-path mods \
+	-d classes/monitor.observer.gamma \
+	$(find monitor.observer.gamma -name '*.java')
+jar9 --create \
+	--file mods-gamma/monitor.observer.gamma.jar \
+	-C classes/monitor.observer.gamma .
 
 
 echo " > creating monitor.observer.zero (plain JAR)"
